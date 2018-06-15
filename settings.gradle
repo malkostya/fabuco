@@ -1,0 +1,4 @@
+rootProject.name = 'fabuco'
+include 'fabuco-core'
+include 'fabuco-examples'
+

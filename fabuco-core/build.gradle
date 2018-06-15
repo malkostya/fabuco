@@ -1,0 +1,14 @@
+group 'fabuco'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+dependencies {
+    compile libs.logback
+    compile libs.akka_actor
+    compile libs.jackson_databind
+    compile libs.reflections
+    compile "com.googlecode.combinatoricslib:combinatoricslib:2.1"
+}

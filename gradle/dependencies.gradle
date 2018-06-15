@@ -1,0 +1,23 @@
+ext {
+    libVersions = [
+            logback           : '1.2.3',
+            scala             : '2.12',
+            akka              : '2.5.8',
+            jackson           : '2.9.2',
+            camel             : '2.20.2',
+            reflections       : '0.9.11',
+            junit5            : '5.0.0',
+            junit4            : '4.12.1',
+            mockito           : '1.10.19',
+
+    ]
+
+    libs = [
+            logback: "ch.qos.logback:logback-classic:${libVersions.logback}",
+            akka_actor: "com.typesafe.akka:akka-actor_${libVersions.scala}:${libVersions.akka}",
+            jackson_databind: "com.fasterxml.jackson.core:jackson-databind:${libVersions.jackson}",
+            camel_core: "org.apache.camel:camel-core:${libVersions.camel}",
+            camel_jetty: "org.apache.camel:camel-jetty:${libVersions.camel}",
+            reflections: "org.reflections:reflections:${libVersions.reflections}",
+    ]
+}

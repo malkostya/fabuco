@@ -1,0 +1,13 @@
+group 'fabuco'
+version '1.0-SNAPSHOT'
+
+dependencies {
+    compile libs.camel_core
+    compile libs.camel_jetty
+    compile project(':fabuco-core')
+    testCompile "org.junit.jupiter:junit-jupiter-api:${libVersions.junit5}"
+    testCompile "org.junit.jupiter:junit-jupiter-params:${libVersions.junit5}"
+    testCompile "org.mockito:mockito-all:${libVersions.mockito}"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:${libVersions.junit5}"
+    testRuntime "org.junit.vintage:junit-vintage-engine:${libVersions.junit4}"
+}
