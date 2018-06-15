@@ -21,7 +21,8 @@ Fabuco is designed as distributed HighLoad asynchronous frameWork for orders pro
 you accumulate logic of your program execution in fabuco processes which get input parameters, do 
 some actions like call other processes or external resources (fabuco performers) in parallel or 
 sequentially and eventually return some results. An order is the task which the process has to fulfil 
-and the order contains parameters for the process. Every order has own parameter key with defines unique   
+and the order contains parameters for the process. Every order has own parameter key with defines order 
+identity like passport id or mobile number.  
 
 With Fabuco you're able to do the following:
 
