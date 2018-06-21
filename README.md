@@ -1,3 +1,9 @@
+# Distributed HighLoad asynchronous framework for orders processing
+
+*If you're reading this on github.com, please note that this is the readme
+for the development version and that some features described here might
+not yet have been implemented.
+
 In the world of software development your programs interact while executing with numerous systems and 
 there exist only a few scenarios if something goes sideways.
 
@@ -17,26 +23,40 @@ external system call until it succeeds. In order to realise these retries you ca
 systems like RabbitMQ or ActivMQ but going this way you make your application code more complex and 
 verbose. To resolve the issue I started implementing Fabuco. 
 
-Fabuco is designed as distributed HighLoad asynchronous frameWork for orders processing. In Fabuco 
+Fabuco is designed as distributed HighLoad asynchronous frameWork for order processing. In Fabuco 
 you accumulate logic of your program execution in fabuco processes which get input parameters, do 
 some actions like call other processes or external resources (fabuco performers) in parallel or 
 sequentially and eventually return some results. An order is the task which the process has to fulfil 
-and the order contains parameters for the process. Every order has own parameter key with defines order 
-identity like passport id or mobile number.  
+and the order contains parameters for the process. Every order has own parameter key which defines order 
+identity like passport id or mobile number. 
 
-With Fabuco you're able to do the following:
+**Features:**
 
-1. To call numerous resources simultaneously and then collect and analyse their results in one place.
-2. If some of the resources return errors you are able to retry them asynchronously for a while 
-   without thread locking and using customised retry algorithms.
-3. Simple code syntax. Each process is realized in one java class.
-4. You can keep state in processes.
-5. Fabuco process stores all their calls in persistent storage and in case fabuco node is down 
-   another node continues to process unfinished work.
-6. Horizontal scalability.
-7. Orders have customised priorities.
-8. Orders related to different processes and grouped by parameter key can be assembled in one 
-   sorted group and they will be sorted by order date before processing.
+* To call numerous resources simultaneously and then collect and analyse their results in one place.
+* If some of the resources return errors you are able to retry them asynchronously for a while 
+  without thread locking and using customised retry algorithms.
+* Simple code syntax. Every process is realized in one java class.
+* You can keep state in fabuco process.
+* Fabuco process stores all their calls in persistent storage and in case of fabuco node is down 
+  another node continues to process unfinished work.
+* Horizontal scalability.
+* Orders have customised priorities.
+* Orders related to different processes and grouped by parameter key can be assembled in one 
+  sorted group and they will be sorted by order date before processing.
    
-At the moment Fabuco is under development and unfortunately some of the features above are not 
-implemented yet.     
+You can find more details about how to use fabuco in fabuco-examples module.
+
+## License
+Copyright 2012-2018, DataStax
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
