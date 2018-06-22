@@ -1,6 +1,6 @@
 # Distributed HighLoad asynchronous framework for orders processing
 
-*If you're reading this on github.com, please note that this is the readme
+If you're reading this on github.com, please note that this is the readme
 for the development version and that some features described here might
 not yet have been implemented.
 
@@ -47,7 +47,7 @@ identity like passport id or mobile number.
 You can find more details about how to use fabuco in fabuco-examples module.
 
 ## License
-Copyright 2012-2018, DataStax
+Copyright 2018, Kostya Malko
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
